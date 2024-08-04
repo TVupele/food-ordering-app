@@ -49,7 +49,7 @@ function updateCart() {
     totalPrice = 0;
     cart.forEach((cartItem, index) => {
         const li = document.createElement('li');
-        li.textContent = `${cartItem.item} - $${cartItem.price}`;
+        li.textContent = `${cartItem.item} - N${cartItem.price}`;
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
         removeButton.onclick = () => {
@@ -60,7 +60,7 @@ function updateCart() {
         cartItems.appendChild(li);
         totalPrice += cartItem.price;
     });
-    document.getElementById('total-price').textContent = `Total: $${totalPrice}`;
+    document.getElementById('total-price').textContent = `Total: N${totalPrice}`;
 }
 
 async function placeOrder() {
