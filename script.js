@@ -119,7 +119,7 @@ async function fetchOrders() {
             orderList.innerHTML = '';
             orders.forEach(order => {
                 const li = document.createElement('li');
-                li.textContent = `Order #${order._id} - Total: $${order.total} - Date: ${new Date(order.date).toLocaleString()}`;
+                li.textContent = `Order #${order._id} - Total: N${order.total} - Date: ${new Date(order.date).toLocaleString()}`;
                 orderList.appendChild(li);
             });
         } else {
